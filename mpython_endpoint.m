@@ -115,7 +115,7 @@ function varargout = check_argin(varargin)
 
             % 4. MATLAB objects
             elseif strcmp(S.type__, 'object')
-                s = getArrayFromByteStream(S.data__);
+                s = getArrayFromByteStream(uint8(S.data__));
 
             % 5. Unknown type
             else
